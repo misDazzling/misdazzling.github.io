@@ -98,8 +98,6 @@ print(f"\n所有视频的总时长: {total_formatted_duration}")
 
 ```
 
-![](https://i-blog.csdnimg.cn/img_convert/8a2689a2cf565f544831425fef526357.png)
-
 
 
 

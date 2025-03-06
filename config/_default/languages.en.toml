@@ -1,0 +1,31 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "misdazzling blog"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  # logo = "img/logo.png"
+  # secondaryLogo = "img/secondary-logo.png"
+  # description = "My awesome website"
+  # copyright = "Copy, _right?_ :thinking_face:"
+
+  [params.author]
+  name = "misdazzling"
+  email = "misdaszzling01@gmail.com"
+  image = "images/avatar.jpg"
+  imageQuality = 96
+  headline = "Infinite progress"
+  bio = "Infinite progress"
+  links = [
+    { email = "mailto:misdazzling01@gmail.com" },
+    { link = "https://link-to-some-website.com/" },
+    { github = "https://github.com/misdazzling" },
+    { gitlab = "https://gitlab.com/misdazzling" },  
+    { heart = "https://afdian.com/a/dazzling/"}  ,
+
+ ]

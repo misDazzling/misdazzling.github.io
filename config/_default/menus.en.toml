@@ -1,0 +1,63 @@
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+# 
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+# config/_default/menus.toml
+
+[[main]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 10
+
+
+[[main]]
+ 
+  name = "yuque"
+  url = "https://www.yuque.com/u21923652"
+  weight = 25
+[[main]]
+  pre = "github"
+  name = "GitHub"
+  url = "https://github.com/misdazzling"
+  weight = 30
+[[main]]
+  pre = "heart"
+  name = "support me"
+  url = "https://afdian.com/a/dazzling/"
+  weight = 30
+[[main]]
+  pre = "sun"
+  name = "about me"
+  pageRef = "about"
+  weight = 31
+
+
+
+
+
+
+
+
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
+
+[[footer]]
+   name = "Tags"
+   pageRef = "tags"
+   weight = 10
+
+ [[footer]]
+   name = "Categories"
+   pageRef = "categories"
+   weight = 20

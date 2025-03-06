@@ -1,11 +1,9 @@
-# .github/workflows/gh-pages.yml
-
 name: GitHub Pages
 
 on:
   push:
     branches:
-      - source
+      - source  # 当 source 分支有更新时触发构建
 
 jobs:
   build-deploy:
@@ -29,8 +27,7 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          github_token: ${{ secrets.HUGO_BLOG }}
-          publish_branch: main
-          publish_dir: ./public
+          github_token: ${{ secrets.HUGO_BLOG }}  # 你的 GitHub token
+          publish_branch: main  # 将构建的内容推送到 main 分支
+          publish_dir: ./public  # public 目录是 Hugo 构建后的输出目录

@@ -8,7 +8,7 @@ Hello! I am a master's student majoring in Computer Science, specializing in Emb
   
 <br>
 
-{{< alert "tenail" >}}
+{{< alert "email" >}}
 Feel free to contact me and my email is : <code>misdazzling01@gmail.com</code> 
 {{< /alert >}}
 

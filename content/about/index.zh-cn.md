@@ -52,5 +52,7 @@ Feel free to contact me and my email is : <code>misdazzling01@gmail.com</code>
 <br>
 
 # 开源项目
+
 {{< github repo="misDazzling/VoxPoser" >}}
+
 {{< github repo="misDazzling/chatgpt-wechat" >}}

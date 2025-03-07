@@ -8,10 +8,10 @@ Hello! I am a master's student majoring in Computer Science, specializing in Emb
   
 <br>
 
+{{< alert "tenail" >}}
+Feel free to contact me and my email is : <code>misdazzling01@gmail.com</code> 
+{{< /alert >}}
 
-<div style="background-color: #1e3a8a; padding: 15px;border-radius: 10px;">
-{{< icon "email" >}}Feel free to contact me and my email is : <code>misdazzling01@gmail.com</code> 
-</div>
 
 
 
@@ -25,9 +25,17 @@ Hello! I am a master's student majoring in Computer Science, specializing in Emb
 # 经历和项目
 {{< timeline >}}
 
+
+{{< timelineItem icon="star" header="voxPoser复现" badge="2024-07" subheader="voxPoser" >}}
+解决官方仓库部署的bug：VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models
+{{< /timelineItem >}}
+
 {{< timelineItem icon="star" header="微信公众号接入chatgpt" badge="2023-09" subheader="chatgpt-wechat" >}}
 为你的微信公众号接入chatgpt，免服务器
 {{< /timelineItem >}}
+
+
+
 
 
 
@@ -39,5 +47,7 @@ Hello! I am a master's student majoring in Computer Science, specializing in Emb
 <br>
 
 # 开源项目
+{{< github repo="misDazzling/VoxPoser" >}}
 {{< github repo="misDazzling/chatgpt-wechat" >}}
+
 

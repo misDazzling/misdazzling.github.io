@@ -12,8 +12,8 @@ title: "About Me"
 <br>
 
 
-{{< alert "tenail" >}}
-Feel free to contact me and my email is : <code>misdazzling01@gmail.com</code> 
+{{< alert "email" >}}
+欢迎与我联系，我的个人邮箱是: <code>misdazzling01@gmail.com</code> 
 {{< /alert >}}
 
 

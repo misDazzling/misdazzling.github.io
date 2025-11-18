@@ -4,6 +4,7 @@ title = 'Hugo博客教程'
 categories = ["杂项"]
 tags =  ["Hugo"]
 +++
+
 一套「Hugo + GitHub + 两分支（source/main）+ 自动部署」的完整流程，你照着做就能跑起来。
 
 > 约定：

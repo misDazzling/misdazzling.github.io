@@ -6,6 +6,7 @@ tags =  ["Hugo"]
 +++
 
 
+
 <h1 id="e1c232e2">**A Complete Workflow for “Hugo + GitHub + Two Branches (source/main) + Automatic Deployment”**</h1>
 Follow these steps and you’ll have everything running smoothly.
 

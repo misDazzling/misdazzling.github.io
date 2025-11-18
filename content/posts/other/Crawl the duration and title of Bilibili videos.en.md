@@ -2,7 +2,7 @@
 date = '2025-03-01T17:13:17+08:00'
 title = 'Crawl the duration and title of Bilibili videos'
 categories = ["other"]
-tags =  ["spider"]
+tags =  ["Spider"]
 +++
 ```java
 import urllib.request

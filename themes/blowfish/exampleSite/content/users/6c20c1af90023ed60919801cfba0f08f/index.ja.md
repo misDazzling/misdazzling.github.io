@@ -1,8 +1,8 @@
 ---
                 title: "loisvelasco.is-a.dev"
-                tags: [パーソナルサイト]
+                tags: [個人サイト]
                 externalUrl: "https://loisvelasco.is-a.dev"
-                weight: 91
+                weight: 10
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

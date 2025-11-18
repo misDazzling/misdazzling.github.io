@@ -1,8 +1,8 @@
 ---
                 title: "brendanwallace.github.io"
-                tags: [パーソナルサイト]
+                tags: [個人サイト]
                 externalUrl: "https://brendanwallace.github.io"
-                weight: 41
+                weight: 5
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

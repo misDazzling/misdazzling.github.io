@@ -1,8 +1,8 @@
 ---
                 title: "50-nuances-octets.fr"
-                tags: [组织网站]
+                tags: [组织站点]
                 externalUrl: "https://www.50-nuances-octets.fr/"
-                weight: 351
+                weight: 34
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

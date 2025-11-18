@@ -1,8 +1,8 @@
 ---
                 title: "halcyonstraits.com"
-                tags: [Fotografia delle bambole]
+                tags: [Fotografia di bambole]
                 externalUrl: "https://www.halcyonstraits.com/"
-                weight: 341
+                weight: 33
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

@@ -2,7 +2,7 @@
                 title: "talkdimsum.com"
                 tags: [App site]
                 externalUrl: "https://talkdimsum.com/"
-                weight: 271
+                weight: 27
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

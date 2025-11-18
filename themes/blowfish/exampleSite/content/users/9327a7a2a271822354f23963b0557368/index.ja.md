@@ -1,8 +1,8 @@
 ---
                 title: "mariuskimmina.com"
-                tags: [パーソナルサイト]
+                tags: [個人サイト]
                 externalUrl: "https://mariuskimmina.com/"
-                weight: 231
+                weight: 23
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

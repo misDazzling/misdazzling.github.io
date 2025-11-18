@@ -1,8 +1,8 @@
 ---
                 title: "mucahitkurtlar.github.io"
-                tags: [パーソナルサイト]
+                tags: [個人サイト]
                 externalUrl: "https://mucahitkurtlar.github.io"
-                weight: 31
+                weight: 4
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

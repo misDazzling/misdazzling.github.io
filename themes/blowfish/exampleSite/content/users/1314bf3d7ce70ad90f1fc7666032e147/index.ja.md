@@ -1,8 +1,8 @@
 ---
                 title: "ekwska.com"
-                tags: [個人的なブログ]
+                tags: [個人ブログ]
                 externalUrl: "https://ekwska.com"
-                weight: 611
+                weight: 57
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

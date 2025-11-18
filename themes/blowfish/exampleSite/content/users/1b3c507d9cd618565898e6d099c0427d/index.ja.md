@@ -1,8 +1,8 @@
 ---
                 title: "mayer.life"
-                tags: [パーソナルサイト]
+                tags: [個人サイト]
                 externalUrl: "https://mayer.life"
-                weight: 441
+                weight: 43
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

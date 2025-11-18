@@ -29,6 +29,13 @@ article:
     enable: "Enable zen mode"
     disable: "Disable zen mode"
 
+a11y:
+  title: "Accessibility settings"
+  disable_blur: "Disable blur"
+  disable_images: "Disable background image"
+  show_link_underline: "Show link underline"
+  font_size: "Font size"
+
 author:
   byline_title: "Author"
 
@@ -62,6 +69,7 @@ search:
 sharing:
   email: "Send via email"
   facebook: "Share on Facebook"
+  line: "Share on LINE"
   linkedin: "Share on LinkedIn"
   pinterest: "Pin on Pinterest"
   reddit: "Submit to Reddit"
@@ -69,6 +77,7 @@ sharing:
   bluesky: "Post on Bluesky"
   whatsapp: "Share via WhatsApp"
   telegram: "Share via Telegram"
+  mastodon: "Share via Mastodon"
 
 shortcode:
   recent_articles: "Recent"

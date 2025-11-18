@@ -1,8 +1,8 @@
 ---
                 title: "fahru.my.id"
-                tags: [パーソナルサイト]
+                tags: [個人サイト]
                 externalUrl: "https://www.fahru.my.id"
-                weight: 81
+                weight: 9
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

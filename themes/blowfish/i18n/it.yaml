@@ -20,6 +20,13 @@ article:
   this_article: "This Article"
   related_articles: "Related"
 
+a11y:
+  title: "Impostazioni di accessibilità"
+  disable_blur: "Disattiva sfocatura"
+  disable_images: "Disattiva immagini"
+  show_link_underline: "Mostra sottolineatura link"
+  font_size: "Dimensione del carattere"
+
 author:
   byline_title: "Autore"
 
@@ -53,6 +60,7 @@ search:
 sharing:
   email: "Invia tramite email"
   facebook: "Condividi su Facebook"
+  line: "Condividi su LINE"
   linkedin: "Condividi su LinkedIn"
   pinterest: "Pinna su Pinterest"
   reddit: "Invia a Reddit"

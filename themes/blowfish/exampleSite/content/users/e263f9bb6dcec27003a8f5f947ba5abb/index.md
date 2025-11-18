@@ -2,7 +2,7 @@
                 title: "Academy Customize"
                 tags: [Business site]
                 externalUrl: "https://acamize.com/"
-                weight: 911
+                weight: 79
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

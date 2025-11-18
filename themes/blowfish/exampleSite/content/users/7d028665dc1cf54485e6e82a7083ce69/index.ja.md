@@ -1,8 +1,8 @@
 ---
                 title: "karlukle.site"
-                tags: [個人的なブログ]
+                tags: [個人ブログ]
                 externalUrl: "https://karlukle.site"
-                weight: 651
+                weight: 61
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

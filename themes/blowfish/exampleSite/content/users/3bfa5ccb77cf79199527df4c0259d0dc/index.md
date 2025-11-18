@@ -2,7 +2,7 @@
                 title: "vividscc.com"
                 tags: [Business site]
                 externalUrl: "https://vividscc.com/"
-                weight: 221
+                weight: 22
                 showDate: false
                 showAuthor: false
                 showReadingTime: false

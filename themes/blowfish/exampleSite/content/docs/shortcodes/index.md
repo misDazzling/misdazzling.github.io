@@ -16,12 +16,12 @@ In addition to all the [default Hugo shortcodes](https://gohugo.io/content-manag
 `alert` outputs its contents as a stylised message box within your article. It's useful for drawing attention to important information that you don't want the reader to miss.
 
 <!-- prettier-ignore-start -->
-| Parameter   | Description                                                                                                                                                                                  |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`      | **Optional.** the icon to display on the left side.<br>**Default:** `triangle-exclamation` (Check out the [icon shortcode](#icon) for more details on using icons.)                    |
-| `iconColor` | **Optional.** the color for the icon in basic CSS style.<br>Can be either hex values (`#FFFFFF`) or color names (`white`)<br>By default chosen based on the current color theme .            |
+| Parameter | Description |
+| --- | --- |
+| `icon` | **Optional.** the icon to display on the left side.<br>**Default:** `triangle-exclamation` (Check out the [icon shortcode](#icon) for more details on using icons.) |
+| `iconColor` | **Optional.** the color for the icon in basic CSS style.<br>Can be either hex values (`#FFFFFF`) or color names (`white`)<br>By default chosen based on the current color theme . |
 | `cardColor` | **Optional.** the color for the card background in basic CSS style.<br>Can be either hex values (`#FFFFFF`) or color names (`white`)<br>By default chosen based on the current color theme . |
-| `textColor` | **Optional.** the color for the text in basic CSS style.<br>Can be either hex values (`#FFFFFF`) or color names (`white`)<br>By default chosen based on the current color theme .            |
+| `textColor` | **Optional.** the color for the text in basic CSS style.<br>Can be either hex values (`#FFFFFF`) or color names (`white`)<br>By default chosen based on the current color theme . |
 <!-- prettier-ignore-end -->
 
 The input is written in Markdown so you can format it however you please.
@@ -72,15 +72,17 @@ This is an error!
 | Parameter | Description                                              |
 | --------- | -------------------------------------------------------- |
 | `link`    | **Required.** the `.RelPermalink` to the target article. |
+| `showSummary` | **Optional.** A boolean value indicating whether to show the article summary. If not set, the site's default configuration will be used. |
+| `compactSummary` | **Optional.** A boolean value indicating whether to display the summary in compact mode. Default to false. |
 <!-- prettier-ignore-end -->
 
 **Example:**
 
 ```md
-{{</* article link="/docs/welcome/" */>}}
+{{</* article link="/docs/welcome/" showSummary=true compactSummary=true */>}}
 ```
 
-{{< article link="/docs/welcome/" >}}
+{{< article link="/docs/welcome/" showSummary=true compactSummary=true >}}
 
 <br/><br/><br/>
 
@@ -122,20 +124,20 @@ Call to action
 
 ## Carousel
 
-`carousel` is used to showcase multiple images in an interactive and visually appealing way. This allows a user to slide through multiple images while only taking up the vertical space of a single one. All images are displayed using the full width of the parent component and using one of the predefined aspect ratios of `16:9`, `21:9` or `32:9`.
+`carousel` is used to showcase multiple images in an interactive and visually appealing way. This allows a user to slide through multiple images while only taking up the vertical space of a single one. All images are displayed using the full width of the parent component and the aspect ratio you set with a default of `16:9`.
 
 <!-- prettier-ignore-start -->
-| Parameter     | Description                                                                                                       |
-| ------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `images`      | **Required.** A regex string to match image names or URLs.                                                        |
-| `aspectRatio` | **Optional.** The aspect ratio for the carousel. Either `16-9`, `21-9` or `32-9`. It is set to `16-9` by default. |
-| `interval`    | **Optional.** The interval for the auto-scrooling, specified in milliseconds. Defaults to `2000` (2s)             |
+| Parameter | Description |
+| --- | --- |
+| `images` | **Required.** A regex string to match image names or URLs. |
+| `aspectRatio` | **Optional.** The aspect ratio for the carousel. It is set to `16-9` by default. |
+| `interval` | **Optional.** The interval for the auto-scrooling, specified in milliseconds. Defaults to `2000` (2s) |
 <!-- prettier-ignore-end -->
 
 **Example 1:** 16:9 aspect ratio and verbose list of images
 
 ```md
-{{</* carousel images="{https://cdn.pixabay.com/photo/2016/12/11/12/02/mountains-1899264_960_720.jpg, gallery/03.jpg, gallery/01.jpg, gallery/02.jpg, gallery/04.jpg}" */>}}
+{{</* carousel images="{https://cdn.pixabay.com/photo/2016/12/11/12/02/mountains-1899264_960_720.jpg,gallery/03.jpg,gallery/01.jpg,gallery/02.jpg,gallery/04.jpg}" */>}}
 ```
 
 {{< carousel images="{https://cdn.pixabay.com/photo/2016/12/11/12/02/mountains-1899264_960_720.jpg,gallery/03.jpg,gallery/01.jpg,gallery/02.jpg,gallery/04.jpg}" >}}
@@ -250,16 +252,16 @@ When a provided image is a page resource, it will be optimised using Hugo Pipes 
 The `figure` shortcode accepts six parameters:
 
 <!-- prettier-ignore-start -->
-| Parameter | Description                                                                                                                                                                                                                                                                                                                                                                               |
-| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `src`     | **Required.** The local path/filename or URL of the image. When providing a path and filename, the theme will attempt to locate the image using the following lookup order: Firstly, as a [page resource](https://gohugo.io/content-management/page-resources/) bundled with the page; then an asset in the `assets/` directory; then finally, a static image in the `static/` directory. |
-| `alt`     | [Alternative text description](https://moz.com/learn/seo/alt-text) for the image.                                                                                                                                                                                                                                                                                                         |
-| `caption` | Markdown for the image caption, which will be displayed below the image.                                                                                                                                                                                                                                                                                                                  |
-| `class`   | Additional CSS classes to apply to the image.                                                                                                                                                                                                                                                                                                                                             |
-| `href`    | URL that the image should be linked to.                                                                                                                                                                                                                                                                                                                                                   |
-| `target`  | The target attribute for the `href` URL.                                                                                                                                                                                                                                                                                                                                                  |
-| `nozoom`  | `nozoom=true` disables the image "zoom" functionality. This is most useful in combination with a `href` link.                                                                                                                                                                                                                                                                             |
-| `default` | Special parameter to revert to default Hugo `figure` behaviour. Simply provide `default=true` and then use normal [Hugo shortcode syntax](https://gohugo.io/content-management/shortcodes/#figure).                                                                                                                                                                                       |
+| Parameter | Description |
+| --- | --- |
+| `src` | **Required.** The local path/filename or URL of the image. When providing a path and filename, the theme will attempt to locate the image using the following lookup order: Firstly, as a [page resource](https://gohugo.io/content-management/page-resources/) bundled with the page; then an asset in the `assets/` directory; then finally, a static image in the `static/` directory. |
+| `alt` | [Alternative text description](https://moz.com/learn/seo/alt-text) for the image. |
+| `caption` | Markdown for the image caption, which will be displayed below the image. |
+| `class` | Additional CSS classes to apply to the image. |
+| `href` | URL that the image should be linked to. |
+| `target` | The target attribute for the `href` URL. |
+| `nozoom` | `nozoom=true` disables the image "zoom" functionality. This is most useful in combination with a `href` link. |
+| `default` | Special parameter to revert to default Hugo `figure` behaviour. Simply provide `default=true` and then use normal [Hugo shortcode syntax](https://gohugo.io/content-management/shortcodes/#figure). |
 <!-- prettier-ignore-end -->
 
 Blowfish also supports automatic conversion of images included using standard Markdown syntax. Simply use the following format and the theme will handle the rest:
@@ -294,15 +296,15 @@ Blowfish also supports automatic conversion of images included using standard Ma
 | Parameter | Description                                           |
 | --------- | ----------------------------------------------------- |
 | `repo`    | [String] forgejo repo in the format of `username/repo`|
-| `server`  | [String] server URL like `https://v8.next.forgejo.org`|
+| `server`  | [String] server URL like `https://v11.next.forgejo.org`|
 <!-- prettier-ignore-end -->
 
 **Example 1:**
 
 ```md
-{{</* forgejo server="https://v8.next.forgejo.org" repo="forgejo/forgejo" */>}}
+{{</* forgejo server="https://v11.next.forgejo.org" repo="a/mastodon" */>}}
 ```
-{{< forgejo server="https://v8.next.forgejo.org" repo="forgejo/forgejo" >}}
+{{< forgejo server="https://v11.next.forgejo.org" repo="a/mastodon" >}}
 
 <br/><br/><br/>
 
@@ -365,6 +367,34 @@ In order to add images to the gallery, use `img` tags for each image and add `cl
 
 <br/><br/><br/>
 
+## Gist
+
+`gist` shortcode allows you to embed a GitHub Gist directly into your content by specifying the Gist user, ID, and optionally a specific file.
+
+| Parameter      | Description                                                        |
+| -------------- | ------------------------------------------------------------------ |
+| `[0]`          | [String] GitHub username                                           |
+| `[1]`          | [String] Gist ID                                                   |
+| `[2]` (optional)| [String] Filename within the Gist to embed (optional)             |
+
+**Example 1: Embed entire Gist**
+
+```md
+{{</* gist "octocat" "6cad326836d38bd3a7ae" */>}}
+````
+
+{{< gist "octocat" "6cad326836d38bd3a7ae" >}}
+
+**Example 2: Embed specific file from Gist**
+
+```md
+{{</* gist "rauchg" "2052694" "README.md" */>}}
+```
+
+{{< gist "rauchg" "2052694" "README.md" >}}
+
+<br/><br/><br/>
+
 ## Gitea Card
 
 `gitea` allows you to quickly link a Gitea repository via the gitea API, providing real-time updates on stats such as stars and forks.
@@ -390,18 +420,19 @@ In order to add images to the gallery, use `img` tags for each image and add `cl
 `github` allows you to quickly link a github repository, all while showing and updating in realtime stats about it, such as the number of stars and forks it has.
 
 <!-- prettier-ignore-start -->
-| Parameter | Description                                           |
-| --------- | ----------------------------------------------------- |
-| `repo`    | [String] github repo in the format of `username/repo` |
+| Parameter       | Description                                                   |
+|-----------------|---------------------------------------------------------------|
+| `repo`          | [String] github repo in the format of `username/repo`         |
+| `showThumbnail` | **Optional** [boolean] display a thumbnail for the repository |
 <!-- prettier-ignore-end -->
 
 **Example 1:**
 
 ```md
-{{</* github repo="nunocoracao/blowfish" */>}}
+{{</* github repo="nunocoracao/blowfish" showThumbnail=true */>}}
 ```
 
-{{< github repo="nunocoracao/blowfish" >}}
+{{< github repo="nunocoracao/blowfish" showThumbnail=true >}}
 
 <br/><br/><br/>
 
@@ -426,6 +457,35 @@ Finally, custom GitLab instance URL can be provided, as long as the `api/v4/proj
 ```
 
 {{< gitlab projectID="278964" >}}
+
+<br/><br/><br/>
+
+## Hugging Face Card
+
+`huggingface` allows you to quickly link a Hugging Face model or dataset, displaying real-time information such as the number of likes and downloads, along with type and description.
+
+| Parameter  | Description                                                    |
+|------------|----------------------------------------------------------------|
+| `model`    | [String] Hugging Face model in the format of `username/model` |
+| `dataset`  | [String] Hugging Face dataset in the format of `username/dataset` |
+
+**Note:** Use either `model` or `dataset` parameter, not both.
+
+**Example 1 (Model):**
+
+```md
+{{</* huggingface model="google-bert/bert-base-uncased" */>}}
+```
+
+{{< huggingface model="google-bert/bert-base-uncased" >}}
+
+**Example 2 (Dataset):**
+
+```md
+{{</* huggingface dataset="stanfordnlp/imdb" */>}}
+```
+
+{{< huggingface dataset="stanfordnlp/imdb" >}}
 
 <br/><br/><br/>
 
@@ -455,17 +515,17 @@ The `katex` shortcode can be used to add mathematical expressions to article con
 
 To include mathematical expressions in an article, simply place the shortcode anywhere with the content. It only needs to be included once per article and KaTeX will automatically render any markup on that page. Both inline and block notation are supported.
 
-Inline notation can be generated by wrapping the expression in `\\(` and `\\)` delimiters. Alternatively, block notation can be generated using `$$` delimiters.
+Inline notation can be generated by wrapping the expression in `\(` and `\)` delimiters. Alternatively, block notation can be generated using `$$` delimiters.
 
 **Example:**
 
 ```md
 {{</* katex */>}}
-\\(f(a,b,c) = (a^2+b^2+c^2)^3\\)
+\(f(a,b,c) = (a^2+b^2+c^2)^3\)
 ```
 
 {{< katex >}}
-\\(f(a,b,c) = (a^2+b^2+c^2)^3\\)
+\(f(a,b,c) = (a^2+b^2+c^2)^3\)
 
 Check out the [mathematical notation samples]({{< ref "mathematical-notation" >}}) page for more examples.
 
@@ -536,13 +596,13 @@ When life gives you lemons, make lemonade.
 `List` will display a list of recent articles. This shortcode requires a limit value to constraint the list. Additionally, it supports a `where` and a `value` in order to filter articles by their parameters. Note that this shortcode will not display its parent page but it will count for the limit value.
 
 <!-- prettier-ignore-start -->
-| Parameter  | Description                                                                                                                                             |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `limit`    | **Required.** the number of recent articles to display.                                                                                                 |
-| `title`    | Optional title for the list, default is `Recent`                                                                                                        |
-| `cardView` | Optional card view enabled for the list, default is `false`                                                                                             |
-| `where`    | The variable to be used for the query of articles e.g. `Type`                                                                                           |
-| `value`    | The value that will need to match the parameter defined in `where` for the query of articles e.g. for `where` == `Type` a valid value could be `sample` |
+| Parameter | Description |
+| --- | --- |
+| `limit` | **Required.** the number of recent articles to display. |
+| `title` | Optional title for the list, default is `Recent` |
+| `cardView` | Optional card view enabled for the list, default is `false` |
+| `where` | The variable to be used for the query of articles e.g. `Type` |
+| `value` | The value that will need to match the parameter defined in `where` for the query of articles e.g. for `where` == `Type` a valid value could be `sample` |
 
 {{< alert >}}
 The `where` and `value` values are used in the following query `where .Site.RegularPages $where $value` in the code of the shortcode. Check [Hugo docs](https://gohugo.io/methods/page/) to learn more about which parameters are available to use.
@@ -668,7 +728,8 @@ The `timeline` creates a visual timeline that can be used in different use-cases
 <!-- prettier-ignore-start -->
 | Parameter   | Description                                  |
 | ----------- | -------------------------------------------- |
-| `icon`      | the icon to be used in the timeline visuals. |
+| `md`        | render the content as Markdown (true/false)  |
+| `icon`      | the icon to be used in the timeline visuals  |
 | `header`    | header for each entry                        |
 | `badge`     | text to place within the top right badge     |
 | `subheader` | entry's subheader                            |
@@ -718,7 +779,7 @@ With other shortcodes
 {{< timeline >}}
 
 {{< timelineItem icon="github" header="header" badge="badge test" subheader="subheader" >}}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non magna ex. Donec sollicitudin ut lorem quis lobortis. Nam ac ipsum libero. Sed a ex eget ipsum tincidunt venenatis quis sed nisl. Pellentesque sed urna vel odio consequat tincidunt id ut purus. Nam sollicitudin est sed dui interdum rhoncus. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non magna ex. Donec sollicitudin ut lorem quis lobortis. Nam ac ipsum libero. Sed a ex eget ipsum tincidunt venenatis quis sed nisl. Pellentesque sed urna vel odio consequat tincidunt id ut purus. Nam sollicitudin est sed dui interdum rhoncus.
 {{</ timelineItem >}}
 
 
@@ -758,17 +819,17 @@ With other shortcodes
 Blowfish implements a sub-set of TypeIt features using a `shortcode`. Write your text within the `typeit` shortcode and use the following parameters to configure the behavior you want.
 
 <!-- prettier-ignore-start -->
-| Parameter          | Description                                                                                                                                        |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `tag`              | [String] `html` tag that will be used to render the strings.                                                                                       |
-| `classList`        | [String] List of `css` classes to apply to the `html` element.                                                                                     |
-| `initialString`    | [String] Initial string that will appear written and will be replaced.                                                                             |
-| `speed`            | [number] Typing speed, measured in milliseconds between each step.                                                                                 |
-| `lifeLike`         | [boolean] Makes the typing pace irregular, as if a real person is doing it.                                                                        |
-| `startDelay`       | [number] The amount of time before the plugin begins typing after being initialized.                                                               |
-| `breakLines`       | [boolean] Whether multiple strings are printed on top of each other (true), or if they're deleted and replaced by each other (false).              |
+| Parameter | Description |
+| --- | --- |
+| `tag` | [String] `html` tag that will be used to render the strings. |
+| `classList` | [String] List of `css` classes to apply to the `html` element. |
+| `initialString` | [String] Initial string that will appear written and will be replaced. |
+| `speed` | [number] Typing speed, measured in milliseconds between each step. |
+| `lifeLike` | [boolean] Makes the typing pace irregular, as if a real person is doing it. |
+| `startDelay` | [number] The amount of time before the plugin begins typing after being initialized. |
+| `breakLines` | [boolean] Whether multiple strings are printed on top of each other (true), or if they're deleted and replaced by each other (false). |
 | `waitUntilVisible` | [boolean] Determines if the instance will begin when loaded or only when the target element becomes visible in the viewport. The default is `true` |
-| `loop`             | [boolean] Whether your strings will continuously loop after completing                                                                             |
+| `loop` | [boolean] Whether your strings will continuously loop after completing |
 
 <!-- prettier-ignore-end -->
 

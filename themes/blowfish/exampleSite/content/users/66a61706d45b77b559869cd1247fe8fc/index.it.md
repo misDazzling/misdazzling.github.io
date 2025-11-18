@@ -2,7 +2,7 @@
                 title: "clemsau.com"
                 tags: [Sito personale]
                 externalUrl: "https://clemsau.com/"
-                weight: 301
+                weight: 30
                 showDate: false
                 showAuthor: false
                 showReadingTime: false
